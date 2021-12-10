@@ -1,0 +1,23 @@
+
+server.port: 8790
+spring.boot.admin:
+  instance-auth:
+    enabled: true
+    #default-user-name: "${some.user.name.from.secret}"
+    #default-password: "${some.user.password.from.secret}"
+    service-map:
+      Biller Gateway:
+        user-name: admin
+        user-password: admin
+      Market Place:
+        user-name: admin
+        user-password: admin
+  #context-path: admin
+
+
+  monitor:
+    status-interval: 120000ms
+    status-lifetime: 120000ms
+    info-interval: 120000ms
+    info-lifetime: 120000ms
+    default-timeout: 120000ms
